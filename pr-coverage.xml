@@ -1,0 +1,58 @@
+<coverage version="1">
+  <file path="/Users/darrell.bennington/projects/SonarTest/SonarTest/FullyTestedClass.swift">
+    <lineToCover lineNumber="11" covered="true"/>
+    <lineToCover lineNumber="13" covered="true"/>
+    <lineToCover lineNumber="14" covered="true"/>
+    <lineToCover lineNumber="15" covered="true"/>
+    <lineToCover lineNumber="17" covered="true"/>
+    <lineToCover lineNumber="18" covered="true"/>
+    <lineToCover lineNumber="19" covered="true"/>
+    <lineToCover lineNumber="21" covered="true"/>
+    <lineToCover lineNumber="22" covered="true"/>
+    <lineToCover lineNumber="23" covered="true"/>
+  </file>
+  <file path="/Users/darrell.bennington/projects/SonarTest/SonarTest/PartiallyTestedClass.swift">
+    <lineToCover lineNumber="11" covered="true"/>
+    <lineToCover lineNumber="13" covered="true"/>
+    <lineToCover lineNumber="14" covered="true"/>
+    <lineToCover lineNumber="15" covered="true"/>
+    <lineToCover lineNumber="17" covered="false"/>
+    <lineToCover lineNumber="18" covered="false"/>
+    <lineToCover lineNumber="19" covered="false"/>
+    <lineToCover lineNumber="21" covered="true"/>
+    <lineToCover lineNumber="22" covered="true"/>
+    <lineToCover lineNumber="23" covered="true"/>
+  </file>
+  <file path="/Users/darrell.bennington/projects/SonarTest/SonarTest/UntestedClass.swift">
+    <lineToCover lineNumber="11" covered="false"/>
+    <lineToCover lineNumber="13" covered="false"/>
+    <lineToCover lineNumber="14" covered="false"/>
+    <lineToCover lineNumber="15" covered="false"/>
+    <lineToCover lineNumber="17" covered="false"/>
+    <lineToCover lineNumber="18" covered="false"/>
+    <lineToCover lineNumber="19" covered="false"/>
+    <lineToCover lineNumber="21" covered="false"/>
+    <lineToCover lineNumber="22" covered="false"/>
+    <lineToCover lineNumber="23" covered="false"/>
+  </file>
+  <file path="/Users/darrell.bennington/projects/SonarTest/SonarTestTests/FullTestedClassTests.swift">
+    <lineToCover lineNumber="12" covered="true"/>
+    <lineToCover lineNumber="13" covered="true"/>
+    <lineToCover lineNumber="14" covered="true"/>
+    <lineToCover lineNumber="15" covered="true"/>
+    <lineToCover lineNumber="16" covered="true"/>
+    <lineToCover lineNumber="18" covered="true"/>
+    <lineToCover lineNumber="19" covered="true"/>
+    <lineToCover lineNumber="20" covered="true"/>
+    <lineToCover lineNumber="21" covered="true"/>
+    <lineToCover lineNumber="22" covered="true"/>
+    <lineToCover lineNumber="23" covered="true"/>
+  </file>
+  <file path="/Users/darrell.bennington/projects/SonarTest/SonarTestTests/PartiallyTestedClassTests.swift">
+    <lineToCover lineNumber="12" covered="true"/>
+    <lineToCover lineNumber="13" covered="true"/>
+    <lineToCover lineNumber="14" covered="true"/>
+    <lineToCover lineNumber="15" covered="true"/>
+    <lineToCover lineNumber="16" covered="true"/>
+  </file>
+</coverage>
