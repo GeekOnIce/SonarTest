@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "D1BEF4C4-38EA-4A4D-A68B-92E0D287D375",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:SonarTest.xcodeproj",
+        "identifier" : "BC04F44E2AAF4BF600228237",
+        "name" : "SonarTestTests"
+      }
+    }
+  ],
+  "version" : 1
+}

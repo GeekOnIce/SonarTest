@@ -1,0 +1,70 @@
+default_platform(:ios)
+
+# Variables to remove duplication between Sonar main merge and PR analysis
+sonar_organization = "geekonice"
+project_key = "GeekOnIce_SonarTest"
+project_name = "SonarTest"
+
+project_version = "1.0"
+project_language = "swift"
+sonar_runner_args = "-Dsonar.c.file.suffixes=- -Dsonar.cpp.file.suffixes=- -Dsonar.objc.file.suffixes=- -Dsonar.pullrequest.provider=github"
+sonar_url = "https://sonarcloud.io"
+
+# Add exclusions for analysis
+exclusions = ",**/SonarTestTests/**,**/Package.swift,test_output/**,*.xml"
+
+platform :ios do
+    desc "Exports Test Coverage and Code Quality Analysis from PR to SonarCloud"
+    lane :sonar_analysis_pr do |options|
+        Dir.chdir("..") do
+            sh(
+                "#{options[:workspace]}/xccov-to-sonarqube-generic.sh #{options[:result_path]} > #{options[:workspace]}/sonarqube-generic-coverage.xml"
+            )
+        end
+        xcresult_to_junit(
+            xcresult_path: options[:result_path],
+            output_path: "#{options[:workspace]}/test_output"
+        )
+        sonar(
+            project_key: "#{project_key}",
+            project_name: "#{project_name}",
+            project_version: "#{project_version}",
+            project_language: "#{project_language}",
+            exclusions: "#{exclusions}",
+            sonar_runner_args: "-Dsonar.projectBaseDir=#{options[:workspace]} -Dsonar.junit.report_paths=#{options[:workspace]}/test_output -Dsonar.coverageReportPaths=#{options[:workspace]}/sonarqube-generic-coverage.xml #{sonar_runner_args}",
+            sources_path: options[:workspace],
+            sonar_organization: "#{sonar_organization}",
+            sonar_login: options[:sonar_token],
+            sonar_url: "#{sonar_url}",
+            pull_request_branch: options[:source_branch],
+            pull_request_base: options[:target_branch],
+            pull_request_key: options[:pr_number] 
+        )
+    end
+    
+    desc "Exports Test Coverage and Code Quality Analysis from branch to SonarCloud"
+    lane :sonar_analysis_main_merge do |options|
+        Dir.chdir("..") do
+            sh(
+                "#{options[:workspace]}/xccov-to-sonarqube-generic.sh #{options[:result_path]} > #{options[:workspace]}/sonarqube-generic-coverage.xml"
+            )
+        end
+        xcresult_to_junit(
+            xcresult_path: options[:result_path],
+            output_path: "#{options[:workspace]}/test_output"
+        )
+        sonar(
+            project_key: "#{project_key}",
+            project_name: "#{project_name}",
+            project_version: "#{project_version}",
+            project_language: "#{project_language}",
+            exclusions: "#{exclusions}",
+            sonar_runner_args: "-X -Dsonar.projectBaseDir=#{options[:workspace]} -Dsonar.junit.report_paths=#{options[:workspace]}/test_output -Dsonar.coverageReportPaths=#{options[:workspace]}/sonarqube-generic-coverage.xml #{sonar_runner_args}",
+            sources_path: options[:workspace],
+            sonar_organization: "#{sonar_organization}",
+            sonar_login: options[:sonar_token],
+            sonar_url: "#{sonar_url}",
+            branch_name: options[:branch]
+        )
+    end
+end
