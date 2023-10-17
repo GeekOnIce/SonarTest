@@ -13,6 +13,8 @@
 		BC5107472AAF4CC400F202BB /* FullyTestedClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5107452AAF4CC400F202BB /* FullyTestedClass.swift */; };
 		BC5107482AAF4CC400F202BB /* UntestedClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5107462AAF4CC400F202BB /* UntestedClass.swift */; };
 		BC51074A2AAF4CD000F202BB /* FullTestedClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5107492AAF4CD000F202BB /* FullTestedClassTests.swift */; };
+		BCD232DB2AAF608D00293063 /* PartiallyTestedClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD232DA2AAF608D00293063 /* PartiallyTestedClass.swift */; };
+		BCD232DD2AAF60A700293063 /* PartiallyTestedClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD232DC2AAF60A700293063 /* PartiallyTestedClassTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,8 @@
 		BC5107462AAF4CC400F202BB /* UntestedClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UntestedClass.swift; sourceTree = "<group>"; };
 		BC5107492AAF4CD000F202BB /* FullTestedClassTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullTestedClassTests.swift; sourceTree = "<group>"; };
 		BCBEC5462AAF5D40006C1F80 /* SonarTest.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = SonarTest.xctestplan; sourceTree = "<group>"; };
+		BCD232DA2AAF608D00293063 /* PartiallyTestedClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartiallyTestedClass.swift; sourceTree = "<group>"; };
+		BCD232DC2AAF60A700293063 /* PartiallyTestedClassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartiallyTestedClassTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 			children = (
 				BC5107452AAF4CC400F202BB /* FullyTestedClass.swift */,
 				BC5107462AAF4CC400F202BB /* UntestedClass.swift */,
+				BCD232DA2AAF608D00293063 /* PartiallyTestedClass.swift */,
 				BC04F4482AAF4BF600228237 /* SonarTest.h */,
 				BC04F4492AAF4BF600228237 /* SonarTest.docc */,
 			);
@@ -89,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				BC5107492AAF4CD000F202BB /* FullTestedClassTests.swift */,
+				BCD232DC2AAF60A700293063 /* PartiallyTestedClassTests.swift */,
 			);
 			path = SonarTestTests;
 			sourceTree = "<group>";
@@ -204,6 +210,7 @@
 			files = (
 				BC5107472AAF4CC400F202BB /* FullyTestedClass.swift in Sources */,
 				BC04F44A2AAF4BF600228237 /* SonarTest.docc in Sources */,
+				BCD232DB2AAF608D00293063 /* PartiallyTestedClass.swift in Sources */,
 				BC5107482AAF4CC400F202BB /* UntestedClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCD232DD2AAF60A700293063 /* PartiallyTestedClassTests.swift in Sources */,
 				BC51074A2AAF4CD000F202BB /* FullTestedClassTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
